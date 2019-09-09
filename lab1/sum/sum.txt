@@ -1,0 +1,10 @@
+sum: 0
+enter value: sum: 1
+enter value: sum: 2
+enter value: sum: 3
+enter value: sum: 4
+enter value: sum: 5
+enter value: sum: 6
+enter value: sum: 7
+enter value: sum: 8
+enter value: 
