@@ -10,7 +10,6 @@ int main(){
 	while(cin >> val){
 		tot = tot + val;
 		cout << "sum: " << tot << "\n"<<  "enter value: ";
-		
 	}
 	return EXIT_SUCCESS;
 }

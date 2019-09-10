@@ -20,7 +20,7 @@ public:
     /*
      * Find roots, i.e. x when y(x) = 0
      */
-	void findRoots();
+	void findRoots(int &roots, float &x1, float &x2);
     
     /*
      * Destructor:
