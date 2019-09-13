@@ -1,6 +1,7 @@
 #include <iostream>
 
 int main(int argc, char** argv) {
+	//(N + 1)
 	const int N = 10;
 	int Nmove = N;
 	int arrayOfNumbers[N];
@@ -17,45 +18,40 @@ int main(int argc, char** argv) {
 
 	//remove even nmumbers.
 	for (int i = 0; i < N; i++) {
-		if ((arrayOfNumbers[i] % 2 == 0) && (arrayOfNumbers[i] > 2)) {
-			Nmove--;
-			for (int j = i; j < N; j++) {
+		if (((arrayOfNumbers[i] % 2) == 0) && (arrayOfNumbers[i] > 2)) {
+			for (int j = i; j < Nmove; j++) {
 				arrayOfNumbers[j] = arrayOfNumbers[j + 1];
 			}
+			Nmove--;
 		}
 	}
 
 
-	//Check modded array with only odd numbers.
 	for (int i = 0; i < Nmove; i++) {
 		std::cout << "|" << arrayOfNumbers[i] << "|";
 	}
 	std::cout << std::endl;
 
-	for (int i = arrayOfNumbers[0]; i < N + 2; i++) {
-		for (int j = arrayOfNumbers[0]; j < sqrt(i); j++) {
-			if ((i % j == 0) && (i > 3)) {
-				
-				break;
-			}else if((j + 1) > sqrt(i)){
-				std::cout << "add to array " << i << std::endl;
+
+	//Check modded array with only odd numbers.
+	for (int i = 0; i < Nmove; i++) {
+		for (int j = i; j < Nmove; j++) {
+			//What number in the array is a multiple of arrayOfNumbers[i], remove them.
+			if (arrayOfNumbers[j] != arrayOfNumbers[i] && arrayOfNumbers[j] % arrayOfNumbers[i] == 0) {
+				for (int k = j; k < Nmove; k++) {
+					arrayOfNumbers[k] = arrayOfNumbers[k + 1];
+				}
+				Nmove--;
 			}
 		}
 	}
+
+	//Final array of numbers(should be primes only)
+	std::cout << "primes: ";
 	for (int i = 0; i < Nmove; i++) {
-		std::cout << arrayOfNumbers[i] << std::endl;
+		std::cout << "|" << arrayOfNumbers[i] << "|";
 	}
+
 }
 	
-	/*for (int i = 2; i < N; i++) {
-		for (int j = 2; j * j <= i; j++) {
-			std::cout << "i :" << i<< " j :" << j << std::endl;
-
-			if (i % j == 0) {
-				std::cout << "i remove " << i << std::endl;
-			}
-			else if (j + 1 > sqrt(i)) {
-				std::cout << "i add to array " << i << std::endl;
-			}
-		}
-	}*/
+	
