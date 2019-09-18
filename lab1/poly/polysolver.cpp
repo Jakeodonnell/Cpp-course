@@ -25,19 +25,17 @@ int main(int argc, char** argv)
 			b = val;
 		} else if( counter % 3 == 2) {
 			c = val;
-			std::cout << a << b << c << std::endl;
-			
 		Poly2 *poly = new Poly2(a, b, c);
 		poly->findRoots(roots, x1, x2);
 				
 		if(roots == 0) {
 				std::cout << "imaginary roots" << std::endl;
 		}else if (roots == 2) {
-				std::cout <<"roots " << roots << " x1 " <<  x1 << " x2 " << x2 << std::endl;
+				std::cout <<"number of roots: " << roots << "\nx1: " <<  x1 << "\nx2: " << x2 << std::endl;
 				poly->eval(x1);
 				poly->eval(x2);
 		}else if (roots == 1){
-				std::cout <<"roots " << roots << " x1 " <<  x1 << " x2 " << x2 << std::endl;
+				std::cout <<"number of roots: " << roots << "\nx1: " <<  x1 << "\nx2: " << x2 << std::endl;
 				poly->eval(x1);
 				poly->eval(x2);
 			}
