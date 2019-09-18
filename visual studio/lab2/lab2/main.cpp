@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
 
 	const char* String3 = "hej pa dejjj";
 	const char before3 = 'e';
-	const char* after3 = "aaaa";
+	const char* after3 = "ooooo";
 	char* result;
 
 

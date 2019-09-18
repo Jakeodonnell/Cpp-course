@@ -4,7 +4,7 @@
 
 
 void Lab2::Assignment1(){
-	//(N + 1)
+	    // N = elements in the array
 		const int N = 10;
 		int Nmove = N;
 		int arrayOfNumbers[N];
@@ -29,7 +29,9 @@ void Lab2::Assignment1(){
 			}
 		}
 
+		arrayOfNumbers[Nmove] = '\0';
 
+		//Print numbers in array
 		for (int i = 0; i < Nmove; i++) {
 			std::cout << "|" << arrayOfNumbers[i] << "|";
 		}
@@ -79,14 +81,14 @@ char* Lab2::Assignment3(const char* input, const char before, const char* after)
 		}
 	}
 
-	char* newArray = new char[calculatedLength];
+	char* newArray = new char[calculatedLength + 1];
 
 	for (int i = 0, j = 0; i < strlen(input), j < calculatedLength; i++) {
 		
 		if (input[i] == before) {
-			for (int k = 0; k < strlen(after); k++) {
+			for (int k = 0; k < strlen(after); k++, j++) {
 				newArray[j] = after[k];
-				j++;
+			
 			}
 		}
 		else if(input[i] != before){
@@ -94,6 +96,8 @@ char* Lab2::Assignment3(const char* input, const char before, const char* after)
 			j++;
 		}
 	}
+
+	newArray[calculatedLength] = '\0';
 
 	for (int i = 0; i < calculatedLength; i++) {
 		std::cout << newArray[i];
