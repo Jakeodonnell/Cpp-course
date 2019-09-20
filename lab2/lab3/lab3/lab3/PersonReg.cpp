@@ -15,6 +15,7 @@ void PersonReg::addPerson(Person *personPtr) {
 }
 
 void PersonReg::removePerson(Person *persons) {
+
 }
 
 Person* PersonReg::searchPerson(std::string name){

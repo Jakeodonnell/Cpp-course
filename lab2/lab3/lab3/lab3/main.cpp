@@ -19,7 +19,9 @@ int main(int argc, char** argv){
 	while (size < (maxSize)) {
 		size++;
 		std::cin >> firstName >> lastName >> address;
-		std::cout << "enter firstName, lastName, Address: ";
+		if (size < maxSize) {
+			std::cout << "enter firstName, lastName, Address: ";
+		}
 		Person *per = new Person(firstName, lastName, address);
 		Preg->addPerson(per);
 	}
