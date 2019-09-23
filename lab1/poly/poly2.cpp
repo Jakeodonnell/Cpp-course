@@ -18,7 +18,7 @@ float Poly2::eval(float x){
 }
 
 void Poly2::findRoots(int &roots, float &x1, float &x2)
-{
+{ ""
 	float d;
 	int amount;
 	
