@@ -4,8 +4,6 @@
 #include <string>
 
 class PersonMedTel: public Person {
-	std::string name;
-	std::string address;
 	std::string number;
 public:
 	PersonMedTel();
@@ -19,7 +17,7 @@ public:
 
 	std::string getnumber();
 
-	void virtual Print();
+	void Print();
 };
 
 #endif

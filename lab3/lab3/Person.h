@@ -2,6 +2,7 @@
 #define PERSON_H
 
 class Person {
+protected:
 	std::string name;
 	std::string address;
 

@@ -23,16 +23,16 @@ int main(int argc, char** argv) {
 
 	PersonReg* Preg = new PersonReg(maxSize);
 	const std::string fileName = "PersonExempel.txt";
-	std::string address;
-	std::string searchName;
-
+	
 	Preg->ReadReg(Preg, fileName);
-	Person* telePerson = new PersonMedTel("jake", "sunnan", "301892");
+
+	Person* telePerson = new PersonMedTel("Jake ODonnell", "Sunnanvag 6P. 222 26 LUND", "301892");
 	Preg->addPerson(telePerson);
 
 
 	Preg->printAllPersons();
 	cout << "\nSearch name: " << endl;
+	std::string searchName;
 	getline(cin, searchName);
 
 	Person* foundPerson = Preg->searchPerson(searchName);
@@ -65,6 +65,7 @@ int main(int argc, char** argv) {
 		Preg->freeTextSearch(freeName, prev)->Print();
 		prev = curr;
 	}
+
 	delete telePerson;
 	delete Preg;
 	_CrtDumpMemoryLeaks();

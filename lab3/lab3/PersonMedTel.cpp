@@ -28,7 +28,7 @@ std::string PersonMedTel::getnumber() {
 }
 
 void PersonMedTel::Print() {
-	std::cout << "\n PERSON INFO" << "\nname: " << name << "\nAddress: " << address << "\nNumber: " << number <<  std::endl;
+	std::cout << "\n PERSON INFOTELE" << "\nname: " << name << "\nAddress: " << address << "\nNumber: " << number <<  std::endl;
 }
 
 

@@ -36,27 +36,22 @@ void PersonReg::removePerson(Person* person) {
 }
 
 Person* PersonReg::freeTextSearch(std::string name, Person* person) {
-	for (Person* personSearched = personsList; personSearched != personsList + maxSize; ++personSearched) {
-		if (person == nullptr) {
-			std::string nameCheck = personSearched->getName();
-			std::string addressCheck = personSearched->getaddress();
-			std::size_t foundName = nameCheck.find(name);
-			std::size_t foundAddress = addressCheck.find(name);
+	int dist;
+	if (person == nullptr) {
+		dist = 0;
+	}
+	else {
+		dist = std::distance(personsList, person) + 1;
+	}
+	for (Person* personSearched = personsList + dist; personSearched != personsList + maxSize; ++personSearched) {
+		std::string nameCheck = personSearched->getName();
+		std::string addressCheck = personSearched->getaddress();
 
-			if (foundName != std::string::npos || foundAddress != std::string::npos) {
-				return personSearched;
-			}
-		}else if (personSearched == person) {
-			for (Person* per = personSearched + 1; per != personsList + maxSize; ++per) {
-				std::string nameCheck = personSearched->getName();
-				std::string addressCheck = personSearched->getaddress();
-				std::size_t foundName = nameCheck.find(name);
-				std::size_t foundAddress = addressCheck.find(name);
+		std::size_t foundName = nameCheck.find(name);
+		std::size_t foundAddress = addressCheck.find(name);
 
-				if (foundName != std::string::npos || foundAddress != std::string::npos) {
-					return per;
-				}
-			}
+		if (foundName != std::string::npos || foundAddress !=std::string::npos) {
+			return personSearched;
 		}
 	}
 	return nullptr;
