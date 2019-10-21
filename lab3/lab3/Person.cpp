@@ -26,4 +26,7 @@ void Person::Print() {
 	std::cout << "\n PERSON INFO" << "\nname: " << name << "\nAddress: " << address << std::endl;
 }
 
+bool Person::operator<(const Person& that){
+	return this->getName < that.getName;
+}
 

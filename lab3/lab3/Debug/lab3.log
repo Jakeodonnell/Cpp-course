@@ -1,2 +1,8 @@
-﻿  main.cpp
-  lab3.vcxproj -> C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab3\Debug\lab3.exe
+﻿  Person.cpp
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab3\lab3\Person.cpp(30,37): error C3867:  'Person::getName': non-standard syntax; use '&' to create a pointer to member
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab3\lab3\Person.cpp(30,37): error C2296:  '<': illegal, left operand has type 'std::string (__thiscall Person::* )(void)'
+  PersonMedTel.cpp
+  PersonReg.cpp
+  main.cpp
+  Generating Code...
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab3\lab3\Person.cpp(30,37): error C2297:  '<': illegal, right operand has type 'std::string (__thiscall Person::* )(void)'

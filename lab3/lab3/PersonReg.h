@@ -29,5 +29,8 @@ public:
 	bool ReadReg(PersonReg* reg, std::string fileName);
 
 	void printAllPersons();
+
+	Person* begin();
+	Person* end();
 };
 #endif

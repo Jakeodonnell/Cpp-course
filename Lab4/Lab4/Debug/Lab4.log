@@ -1,2 +1,7 @@
-﻿  main.cpp
-  Lab4.vcxproj -> C:\Users\Jake\Desktop\C-laboration\Lab4\Debug\Lab4.exe
+﻿  Assignment1.cpp
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\Lab4\Lab4\Assignment1.cpp(74,31): error C3867:  'Assignmnet1::Greater': non-standard syntax; use '&' to create a pointer to member
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\Lab4\Lab4\Assignment1.cpp(74,2): error C2672:  'std::sort': no matching overloaded function found
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\Lab4\Lab4\Assignment1.cpp(74,31): error C2780:  'void std::sort(const _RanIt,const _RanIt)': expects 2 arguments - 3 provided
+  main.cpp
+  Generating Code...
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\algorithm(3484): message :  see declaration of 'std::sort'

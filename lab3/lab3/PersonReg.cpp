@@ -92,3 +92,10 @@ bool PersonReg::ReadReg(PersonReg* reg, std::string fileName) {
 	}
 }
 
+Person* PersonReg::begin() {
+	return personsList;
+}
+
+Person* PersonReg::end() {
+	return personsList + maxSize;
+}

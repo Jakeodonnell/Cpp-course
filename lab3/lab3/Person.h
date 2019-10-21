@@ -16,6 +16,8 @@ public:
 
 	std::string getaddress();
 
+	bool operator<(const Person& that);
+
 	void virtual Print();
 };
 

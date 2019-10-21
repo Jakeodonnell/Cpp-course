@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 #endif
 	int size = 0;
-	const int maxSize = 7;
+	const int maxSize = 12;
 
 	PersonReg* Preg = new PersonReg(maxSize);
 	const std::string fileName = "PersonExempel.txt";
