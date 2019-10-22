@@ -7,7 +7,7 @@
 //#include <stdlib.h>
 #include <crtdbg.h>
 
-//#define VG
+#define VG
 
 //#include "UnsignedTest.h"
 #include "String.h"
@@ -122,11 +122,10 @@ void TestFörGodkäntString() {
 	assert(temp == &str[0]);
 
 	//-	size(), capacity() and reloccation test;
-	TestPushBackReallocation();
+	//TestPushBackReallocation();
 
 	std::cout << String("hej\n");
 	std::cout << "Om det står hej på föregående rad så är TestFörGodkänt klar\n";
-
 }
 
 void TestFörVälGodkäntString() {
@@ -205,8 +204,9 @@ void TestFörVälGodkäntString() {
 		str.push_back(char('0' + i));
 	str1 = "bar";
 	str += str1;
-	for (size_t k = 0; k < i; ++k)
+	for (size_t k = 0; k < i; ++k) {
 		assert(str[k] == '0' + k);
+	}
 	assert(str[i] == 'b');
 	//+= Själv assignment	//Borde testa med att capacity tar slut!
 	str = "foo";
@@ -218,19 +218,18 @@ void TestFörVälGodkäntString() {
 	assert(str + "foo" == "barfoo");
 	AssertStrEqual(str, "bar");
 
-	cout << "\nTestFörVälGodkänt klar\n";
+	std::cout << "\nTestFörVälGodkänt klar\n";
 #endif //VG
 }
-
 
 
 int main() {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	locale::global(locale("swedish"));
+	
 	//TestUnsigned();
 	TestFörGodkäntString();
-	//TestFörVälGodkäntString();
-	new int;
+	TestFörVälGodkäntString();
 	std::cout << "det finns en minnesläcka i main, avsiktligt!\n så ni kan se att er minnesläckstest fungerar\n";
 	cin.get();
 }
