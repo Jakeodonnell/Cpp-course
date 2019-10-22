@@ -1,2 +1,13 @@
-﻿  Main.cpp
-  lab5.vcxproj -> C:\Users\jake\Desktop\C-laboration\lab5\Debug\lab5.exe
+﻿  String.cpp
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab5\lab5\String.cpp(27,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab5\lab5\String.cpp(37,20): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab5\lab5\String.cpp(46,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab5\lab5\String.cpp(54,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab5\lab5\String.cpp(85,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab5\lab5\String.cpp(101,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab5\lab5\String.cpp(144,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab5\lab5\String.cpp(156,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab5\lab5\String.cpp(169,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab5\lab5\String.cpp(174,21): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab5\lab5\String.cpp(185,20): warning C4018:  '<': signed/unsigned mismatch
+  lab5.vcxproj -> C:\Users\Jake\Desktop\Mina projekt\C-laboration\lab5\Debug\lab5.exe

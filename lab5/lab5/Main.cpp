@@ -122,7 +122,7 @@ void TestFörGodkäntString() {
 	assert(temp == &str[0]);
 
 	//-	size(), capacity() and reloccation test;
-	//TestPushBackReallocation();
+	TestPushBackReallocation();
 
 	std::cout << String("hej\n");
 	std::cout << "Om det står hej på föregående rad så är TestFörGodkänt klar\n";

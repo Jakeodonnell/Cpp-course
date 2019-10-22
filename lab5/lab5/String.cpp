@@ -8,9 +8,8 @@ void String::invariant(){
 }
 
 String::~String(){
-	if (str) {
-		delete[] str;	
-		str = nullptr;
+	if (str != nullptr) {	
+		delete[] str;
 	}
 }
 
@@ -86,7 +85,6 @@ void String::push_back(char c){
 		for (int i = 0; i < strSize; i++) {
 			strCpy[i] = str[i];
 		}
-		delete[] str;
 		this->strCapacity = strCapacity * 2;
 		str = strCpy;
 		str[strSize] = c;
@@ -146,7 +144,7 @@ void String::reserve(size_t i){
 		for (int i = 0; i < strSize; i++) {
 			strCpy[i] = str[i];
 		}
-		delete[] str;
+		//delete[] str;
 		str = strCpy;
 	}
 }
@@ -158,7 +156,7 @@ void String::shrink_to_fit(){
 		for (int i = 0; i < strSize; i++) {
 			strCpy[i] = str[i];
 		}
-		delete[] str;
+		//delete[] str;
 		str = strCpy;
 	}
 }
@@ -172,7 +170,6 @@ String& String::operator+=(const String& rhs){
 			strCpy[strSize + j] = rhs[j];
 		}
 		str = strCpy;
-
 	} else {
 		for (int i = 0; i < rhs.size(); i++) {
 			str[strSize + i] = rhs[i];
